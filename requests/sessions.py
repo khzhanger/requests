@@ -418,6 +418,7 @@ class Session(SessionRedirectMixin):
         self.adapters = OrderedDict()
         self.mount('https://', HTTPAdapter())
         self.mount('http://', HTTPAdapter())
+        self.mount('httpgm://', HTTPAdapter())
 
         super().__init__()
 
